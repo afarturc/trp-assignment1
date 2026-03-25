@@ -1,0 +1,18 @@
+# Dataset original (demasiado grande para Git)
+data/original/*.csv
+
+# Dados anonimizados (podem ser regenerados)
+data/anonymized/*.csv
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
