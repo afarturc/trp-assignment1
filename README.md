@@ -2,7 +2,7 @@
 
 Privacy, Utility and Risk Analysis using [ARX](https://arx.deidentifier.org/).
 
-**Dataset:** [Steam Games Dataset 2025](https://www.kaggle.com/datasets/abhishekgupta56447/steam-games-dataset-2025) (~4M rows, 23 columns)
+**Dataset:** [COMPAS Recidivism Risk Score Data](https://www.kaggle.com/datasets/danofer/compass) (ProPublica, ~60K rows, 28 columns → ~18.6K after pivoting)
 
 ## Project Structure
 

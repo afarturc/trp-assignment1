@@ -1,0 +1,7 @@
+Pretrial;Pretrial;*
+Post Sentence;Sentenced;*
+Probation Violator;Sentenced;*
+Parole Violator;Sentenced;*
+Deferred Sentencing;Sentenced;*
+Conditional Release;Other;*
+Other;Other;*

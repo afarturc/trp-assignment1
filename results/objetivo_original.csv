@@ -1,0 +1,19 @@
+Ethnic_Code_Text,Sex_Code_Text,mean_decile,count
+African-Am,Female,5.5,2
+African-Am,Male,7.0,11
+African-American,Female,4.79,1722
+African-American,Male,5.28,6390
+Arabic,Female,2.0,1
+Arabic,Male,3.92,24
+Asian,Female,2.84,19
+Asian,Male,2.44,85
+Caucasian,Female,3.69,1706
+Caucasian,Male,3.45,5036
+Hispanic,Female,3.28,549
+Hispanic,Male,3.22,2179
+Native American,Female,5.84,19
+Native American,Male,4.67,46
+Oriental,Female,3.33,3
+Oriental,Male,3.2,10
+Other,Female,2.64,146
+Other,Male,2.82,662

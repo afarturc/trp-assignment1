@@ -1,0 +1,6 @@
+Jail Inmate;Incarcerated;*
+Prison Inmate;Incarcerated;*
+Probation;Community;*
+Parole;Community;*
+Residential Program;Community;*
+Pretrial Defendant;Pretrial;*
