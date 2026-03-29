@@ -1,0 +1,15 @@
+Ethnic_Code_Text,Sex_Code_Text,mean_decile_orig,count_orig,mean_decile_anon,count_anon,diff,count_retained_pct
+African-American,Female,4.8,1722,4.84,1672.0,0.04,97.1
+African-American,Male,5.31,6390,5.32,6325.0,0.01,99.0
+Arabic,Female,2.0,1,,,,
+Arabic,Male,3.92,24,,,,
+Asian,Female,2.91,22,,,,
+Asian,Male,2.54,95,,,,
+Caucasian,Female,3.7,1703,3.74,1615.0,0.04,94.8
+Caucasian,Male,3.47,5025,3.49,4913.0,0.02,97.8
+Hispanic,Female,3.3,548,3.73,405.0,0.43,73.9
+Hispanic,Male,3.24,2173,3.35,1977.0,0.11,91.0
+Native American,Female,5.89,19,,,,
+Native American,Male,4.72,46,,,,
+Other,Female,2.69,145,,,,
+Other,Male,2.84,661,,,,

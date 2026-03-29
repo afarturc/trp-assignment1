@@ -2,7 +2,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import os
 
-os.makedirs('results', exist_ok=True)
+os.makedirs('results/exploratory', exist_ok=True)
+os.makedirs('results/arx', exist_ok=True)
 
 df = pd.read_csv('data/original/compas-scores-raw.csv')
 print(f"Linhas: {len(df)}, Colunas: {len(df.columns)}")
@@ -15,7 +16,7 @@ nulls = df.isnull().sum()
 nulls_pct = (nulls / len(df) * 100).round(2)
 nulls_df = pd.DataFrame({'nulls': nulls, '%': nulls_pct})
 print(nulls_df[nulls_df['nulls'] > 0])
-nulls_df.to_csv('results/nulls.csv')
+nulls_df.to_csv('results/exploratory/nulls.csv')
 
 # ============================================================
 # 2. Colunas constantes ou quase constantes (validação)
@@ -52,7 +53,7 @@ for col in cat_cols:
     display = pd.DataFrame({'count': vc, '%': vc_pct})
     print(f"\n  {col} ({df[col].nunique()} valores):")
     print(f"    {display.to_string()}")
-    display.to_csv(f'results/dist_{col}.csv')
+    display.to_csv(f'results/exploratory/dist_{col}.csv')
 
 # ============================================================
 # 5. Scores numéricos (RawScore e DecileScore por tipo de scale)
@@ -72,7 +73,7 @@ for score_col in ['RawScore', 'DecileScore']:
     desc = df[score_col].describe(percentiles=[.01, .05, .25, .5, .75, .95, .99]).round(2)
     print(f"\n    {score_col}:")
     print(f"      {desc.to_string()}")
-    desc.to_csv(f'results/stats_{score_col}.csv')
+    desc.to_csv(f'results/exploratory/stats_{score_col}.csv')
 
 # ============================================================
 # 6. DateOfBirth - distribuição de idades
@@ -99,7 +100,7 @@ ax.set_xlabel('Idade')
 ax.set_ylabel('Frequência')
 ax.set_title('Distribuição de Idade (por pessoa)')
 fig.tight_layout()
-fig.savefig('results/dist_age.png', dpi=150)
+fig.savefig('results/exploratory/dist_age.png', dpi=150)
 plt.close()
 
 # ============================================================
@@ -109,7 +110,7 @@ print("\n=== 7. Screening_Date (por ano) ===")
 screening_all = pd.to_datetime(df['Screening_Date'], errors='coerce')
 years = screening_all.dt.year.value_counts().sort_index()
 print(years.to_string())
-years.to_csv('results/dist_screening_year.csv')
+years.to_csv('results/exploratory/dist_screening_year.csv')
 
 # ============================================================
 # 8. Histogramas / Boxplots
@@ -126,7 +127,7 @@ ax.set_ylabel('DecileScore (Recidivism)')
 ax.set_title('DecileScore Recidivism por Etnia')
 plt.xticks(rotation=30, ha='right')
 fig.tight_layout()
-fig.savefig('results/boxplot_decile_by_ethnicity.png', dpi=150)
+fig.savefig('results/exploratory/boxplot_decile_by_ethnicity.png', dpi=150)
 plt.close()
 
 # 8b. DecileScore de Recidivism por Etnia x Género
@@ -139,7 +140,7 @@ for i, sex in enumerate(['Male', 'Female']):
     axes[i].set_ylabel('DecileScore')
     axes[i].tick_params(axis='x', rotation=30)
 fig.tight_layout()
-fig.savefig('results/boxplot_decile_by_ethnicity_gender.png', dpi=150)
+fig.savefig('results/exploratory/boxplot_decile_by_ethnicity_gender.png', dpi=150)
 plt.close()
 
 # 8c. Heatmap de correlação entre scores (por pessoa, após pivot simplificado)
@@ -166,7 +167,7 @@ for i in range(len(corr)):
 fig.colorbar(im)
 ax.set_title('Correlação entre Scores')
 fig.tight_layout()
-fig.savefig('results/heatmap_score_correlation.png', dpi=150)
+fig.savefig('results/exploratory/heatmap_score_correlation.png', dpi=150)
 plt.close()
 
 # ============================================================
@@ -179,7 +180,7 @@ ax.set_ylabel('Frequência')
 ax.set_title('Distribuição de Etnia (por pessoa)')
 ax.tick_params(axis='x', rotation=30)
 fig.tight_layout()
-fig.savefig('results/dist_ethnicity.png', dpi=150)
+fig.savefig('results/exploratory/dist_ethnicity.png', dpi=150)
 plt.close()
 
 # ============================================================
@@ -192,6 +193,6 @@ obj = recid.groupby(['Ethnic_Code_Text', 'Sex_Code_Text']).agg(
     count=('DecileScore', 'size')
 ).round(2)
 print(obj.to_string())
-obj.to_csv('results/objetivo_original.csv')
+obj.to_csv('results/arx/objetivo_original.csv')
 
-print("\n=== Resultados guardados em results/ ===")
+print("\n=== Resultados guardados em results/exploratory/ e results/arx/ ===")

@@ -1,7 +1,10 @@
 # Dataset original (demasiado grande para Git)
 data/original/*.csv
 
-# Dados anonimizados (podem ser regenerados)
+# Dataset sanitizado (derivado do original, 2MB)
+data/sanitized/*.csv
+
+# Dados anonimizados (exportados do ARX, podem ser regenerados)
 data/anonymized/*.csv
 
 # Python

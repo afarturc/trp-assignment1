@@ -1,0 +1,8 @@
+model,k,param_name,param_value,suppressed_pct,granularity_pct,highest_risk_pct,records_at_highest_risk_pct,prosecutor_risk_pct,journalist_risk_pct,marketer_risk_pct,eq_classes,k_real,mae_objetivo,notes
+k-anon+l-div,2,l,2,4.21,77.36,50.0,0.20,50.0,50.0,1.23,219,2,0.38,Age generalizado [20y intervals]; MaritalStatus suprimido (*)
+k-anon+l-div,5,l,3,4.85,69.99,20.0,0.08,20.0,20.0,0.44,78,5,0.108,Hierarchy Ethnic refinada (v2): African-American preservado no nivel1; Age+Sex suprimidos (*)
+k-anon+l-div,10,l,3,2.44,66.49,10.0,0.06,10.0,10.0,0.35,64,10,0.038,African-American preservado; Age suprimido (*); menos supressao que k=5
+k-anon+l-div,5,l,2,4.48,78.63,20.0,0.23,20.0,20.0,0.94,167,5,0.395,Ethnic preservado (valores originais); Age suprimido (*); l=2 menos restritivo permite mais granularidade
+k-anon+tclos,5,t,0.20,0.44,25.36,0.05,10.82,0.05,0.05,0.02,4,2001,N/A,todos sensitivos com t-Closeness; 4 classes enormes; dataset inutilizavel
+k-anon+tclos,5,t,0.20,4.93,52.45,1.89,0.30,1.89,1.89,0.16,29,53,N/A,RawScores reclassificados como insensitive; Ethnic nivel2 (Minority/Caucasian); estatistica objetivo incomparavel
+k-anon+tclos,5,t,0.30,4.17,65.37,12.5,0.04,12.5,12.5,0.32,57,8,0.043,African-American preservado; Age suprimido (*); boa utilidade e risco moderado

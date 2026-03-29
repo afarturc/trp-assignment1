@@ -1,7 +1,7 @@
-African-American;Black;*
-Arabic;Other Minority;*
-Asian;Other Minority;*
-Caucasian;Caucasian;*
-Hispanic;Hispanic;*
-Native American;Other Minority;*
-Other;Other Minority;*
+African-American;African-American;Minority;*
+Arabic;Other Minority;Minority;*
+Asian;Other Minority;Minority;*
+Caucasian;Caucasian;Caucasian;*
+Hispanic;Hispanic;Minority;*
+Native American;Other Minority;Minority;*
+Other;Other Minority;Minority;*
