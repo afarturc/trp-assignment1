@@ -24,6 +24,7 @@ Os scores de risco (escala 1-10) apresentam médias relativamente baixas: Decile
 \centering
 \caption{Distribuição dos atributos quasi-identifying.}
 \label{tab:distribuicao}
+\renewcommand{\arraystretch}{1.3}
 \begin{tabular}{ll}
 \toprule
 \textbf{Atributo} & \textbf{Valores mais frequentes} \\
@@ -38,18 +39,19 @@ CustodyStatus & Jail Inmate 49.2\%, Probation 38.2\% \\
 Screening\_Year & 2013 50.4\%, 2014 49.6\% \\
 \bottomrule
 \end{tabular}
+\renewcommand{\arraystretch}{1.0}
 \end{table}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.9\textwidth]{../results/exploratory/dist_age.png}
+\includegraphics[width=0.95\textwidth]{../results/exploratory/dist_age.png}
 \caption{Distribuição de idade no dataset sanitizado.}
 \label{fig:dist_age}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\textwidth]{../results/exploratory/dist_ethnicity.png}
+\includegraphics[width=0.95\textwidth]{../results/exploratory/dist_ethnicity.png}
 \caption{Distribuição de etnia no dataset sanitizado.}
 \label{fig:dist_ethnicity}
 \end{figure}
@@ -101,7 +103,7 @@ Arabic & Male & 3.92 & 24 \\
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\textwidth]{../results/exploratory/boxplot_decile_by_ethnicity.png}
+\includegraphics[width=0.95\textwidth]{../results/exploratory/boxplot_decile_by_ethnicity.png}
 \caption{Boxplot do DecileScore Recidivism por grupo étnico.}
 \label{fig:boxplot_ethnicity}
 \end{figure}
@@ -117,7 +119,7 @@ O limite de supressão foi fixado em 5\%, permitindo que até 930 registos fosse
 
 O coding model escolhido foi a generalização, com preferência sobre a supressão. A métrica de utilidade selecionada foi a Granularity, que mede a proporção de informação preservada após a generalização, numa escala de 0 a 100\%.
 
-Os pesos dos atributos foram definidos de acordo com a relevância de cada QID para o objetivo de divulgação. Ethnic\_Code\_Text recebeu o peso máximo (1.0) por ser o atributo central da análise de disparidades. Age e Sex\_Code\_Text receberam peso 0.8, enquanto MaritalStatus, LegalStatus e CustodyStatus ficaram em 0.5. Language e Screening\_Year, com baixa variação e menor relevância analítica, receberam o peso mínimo de 0.3.
+Os pesos dos atributos foram definidos de acordo com a relevância de cada QID para o objetivo de divulgação, como se detalha na Secção~\ref{sec:pesos}.
 
 Por fim, foram selecionados dois modelos de privacidade: k-Anonymity em combinação com l-Diversity e k-Anonymity em combinação com t-Closeness, analisados em detalhe na Secção~\ref{sec:modelos}.
 
@@ -163,7 +165,7 @@ Marketer & - & - & 28.56\% \\
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\textwidth]{../results/arx/screenshot_risk_analysis_original.png}
+\includegraphics[width=0.95\textwidth]{../results/arx/screenshot_risk_analysis_original.png}
 \caption{Análise de risco do dataset original no ARX (Prosecutor, Journalist, Marketer).}
 \label{fig:risk_original}
 \end{figure}
@@ -172,7 +174,7 @@ Os valores iguais entre Prosecutor e Journalist indicam a presença de um númer
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\textwidth]{../results/arx/screenshot_distinction_separation.png}
+\includegraphics[width=0.95\textwidth]{../results/arx/screenshot_distinction_separation.png}
 \caption{Análise de distinction e separation dos QIDs no ARX.}
 \label{fig:distinction_separation}
 \end{figure}
@@ -316,7 +318,7 @@ Hispanic & Male & 3.24 & 3.27 & +0.03 \\
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.9\textwidth]{../results/arx/comparison_compas_kanon_ldiv_k10_l3.png}
+\includegraphics[width=0.95\textwidth]{../results/arx/comparison_compas_kanon_ldiv_k10_l3.png}
 \caption{Comparação da estatística objetivo: original vs anonimizado com k=10, l=3.}
 \label{fig:comparison_ldiv}
 \end{figure}
@@ -393,7 +395,7 @@ Hispanic & Male & 3.24 & 3.37 & +0.13 \\
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.9\textwidth]{../results/arx/comparison_compas_kanon_tclos_k5_t030.png}
+\includegraphics[width=0.95\textwidth]{../results/arx/comparison_compas_kanon_tclos_k5_t030.png}
 \caption{Comparação da estatística objetivo: original vs anonimizado com k=5, t=0.30.}
 \label{fig:comparison_tclos}
 \end{figure}
