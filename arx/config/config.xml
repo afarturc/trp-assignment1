@@ -1,0 +1,47 @@
+<config>
+	<suppressTuplesInNonAnonymousOutput>true</suppressTuplesInNonAnonymousOutput>
+	<suppressedAttributeTypes>
+		<type>QUASI_IDENTIFYING_ATTRIBUTE</type>
+	</suppressedAttributeTypes>
+	<practicalMonotonicity>false</practicalMonotonicity>
+	<relativeMaxOutliers>0.05</relativeMaxOutliers>
+	<metric>Loss (0.5/1.0/1.0)</metric>
+	<attributeWeights>
+		<attributeWeight>
+			<attribute>MaritalStatus</attribute>
+			<weight>0.5</weight>
+		</attributeWeight>
+		<attributeWeight>
+			<attribute>Language</attribute>
+			<weight>0.3</weight>
+		</attributeWeight>
+		<attributeWeight>
+			<attribute>Ethnic_Code_Text</attribute>
+			<weight>1.0</weight>
+		</attributeWeight>
+		<attributeWeight>
+			<attribute>LegalStatus</attribute>
+			<weight>0.5</weight>
+		</attributeWeight>
+		<attributeWeight>
+			<attribute>CustodyStatus</attribute>
+			<weight>0.5</weight>
+		</attributeWeight>
+		<attributeWeight>
+			<attribute>Sex_Code_Text</attribute>
+			<weight>0.8</weight>
+		</attributeWeight>
+		<attributeWeight>
+			<attribute>Screening_Year</attribute>
+			<weight>0.3</weight>
+		</attributeWeight>
+		<attributeWeight>
+			<attribute>Age</attribute>
+			<weight>0.8</weight>
+		</attributeWeight>
+	</attributeWeights>
+	<criteria>
+		<criterion>0.3-closeness with equal ground-distance for attribute &apos;DecileScore_Recidivism&apos;</criterion>
+		<criterion>5-anonymity</criterion>
+	</criteria>
+</config>

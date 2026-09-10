@@ -346,3 +346,6 @@ TSWLatexianTemp*
 # option is specified. Footnotes are the stored in a file with suffix Notes.bib.
 # Uncomment the next line to have this generated file ignored.
 #*Notes.bib
+
+# ARX project file (embeds the full input dataset, including direct identifiers)
+arx/*.deid
