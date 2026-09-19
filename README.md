@@ -118,3 +118,11 @@ python scripts/compare.py data/anonymized/compas_kanon_ldiv_k10_l3.csv
 Scripts are meant to run from the project root. The raw dataset is not tracked here: get it from
 [Kaggle](https://www.kaggle.com/datasets/danofer/compass) (originally published by
 [ProPublica](https://github.com/propublica/compas-analysis)).
+
+## License and data
+
+Code and report are released under the [MIT License](LICENSE). The COMPAS dataset itself is not
+covered by it and is not redistributed here: it belongs to
+[ProPublica](https://github.com/propublica/compas-analysis) and contains identifying data about
+real people. Nothing derived from it that could re-identify an individual is tracked in this
+repository — neither the raw CSV, nor the sanitized input, nor the ARX project file.
